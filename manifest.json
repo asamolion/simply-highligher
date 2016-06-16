@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+
+    "name": "Simply Highlighter",
+    "description": "This plugin notifies of the word 'Simply' in the current page",
+    "version": "1.0",
+
+    "icons": {
+        "16": "icons/not-so-simple16.png",
+        "48": "icons/not-so-simple48.png",
+        "128": "icons/not-so-simple128.png"
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "browser_action": {
+        "page": "background.html"
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "notifications",
+        "http://*/",
+        "https://*/"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "css": ["highlight.css"]
+        }
+    ]
+}
