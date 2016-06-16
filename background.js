@@ -28,8 +28,8 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         chrome.notifications.create({
             type: "basic",
             iconUrl: "icons/not-so-simple128.png",
-            title: "No so Simple!",
-            message: "Hey there! You've been notified!"
+            title: "Be Careful!",
+            message: "This tutorial doesn't seem to be aimed at beginners!"
         });
     } else if (message === "disable") {
         ba.setBadgeBackgroundColor({

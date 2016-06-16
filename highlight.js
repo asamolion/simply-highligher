@@ -6,7 +6,7 @@ function highlight(container, what, spanClass) {
     return (container.innerHTML = highlighted) !== content;
 }
 
-if (highlight(document.body, 'simple', 'highlight-simple')) {
+if (highlight(document.body, 'simply', 'highlight-simple')) {
     chrome.runtime.sendMessage('disable');
 } else {
     chrome.runtime.sendMessage('enable');
